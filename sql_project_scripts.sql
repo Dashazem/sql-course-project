@@ -72,18 +72,18 @@ GROUP BY s.students_name;
 -- Students sorted by the courses that they are enrolled in
 SELECT 
 	c.courses_name AS 'Course',
-    s.students_name AS 'Student',
-    s.students_card AS 'Student Card'
+  s.students_name AS 'Student',
+  s.students_card AS 'Student Card'
 FROM students s
 JOIN courses c 
 ON s.students_courses_id = c.courses_id
 GROUP BY 
 	c.courses_name,
-    s.students_name, 
-    s.students_card
+  s.students_name, 
+  s.students_card
 ORDER BY 
-    c.courses_name, 
-    s.students_card;
+  c.courses_name, 
+  s.students_card;
 
  -- Summary report of courses and their average grades
 SELECT
